@@ -104,12 +104,6 @@ function protamine_scripts() {
 	// Theme stylesheet.
 	wp_enqueue_style( 'protamine-style', get_stylesheet_uri() );
 
-	// Load the Internet Explorer 9 specific stylesheet, to fix display issues in the Customizer.
-	if ( is_customize_preview() ) {
-		wp_enqueue_style( 'protamine-ie9', get_theme_file_uri( '/assets/css/ie9.css' ), array( 'protamine-style' ), '1.0' );
-		wp_style_add_data( 'protamine-ie9', 'conditional', 'IE 9' );
-	}
-
 	// Load the Internet Explorer 8 specific stylesheet.
 	wp_enqueue_style( 'protamine-ie8', get_theme_file_uri( '/assets/css/ie8.css' ), array( 'protamine-style' ), '1.0' );
 	wp_style_add_data( 'protamine-ie8', 'conditional', 'lt IE 9' );
