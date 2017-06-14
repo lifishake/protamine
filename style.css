@@ -1,11 +1,11 @@
 /*
 
 Theme Name: protamine
-Theme URI: http:pewae.com
+Theme URI: //pewae.com
 Author: 大致
-Author URI: http:pewae.com
+Author URI: //pewae.com
 Description: protamine基于wordpress官方主题修改。本主题追求简单快捷舒适，仅适用于中文用户。
-Version: 0.0.1
+Version: 0.0.2
 GitHub Theme URI: lifishake/protamine
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -168,8 +168,9 @@ dfn {
 }
 
 mark {
-	background-color: #aaa;
-	color: #050505;
+	background-color: #8a8988;
+	color: #0a161f;
+  text-decoration: none;
 }
 
 small {
@@ -522,7 +523,7 @@ h4 {
 }
 
 h5 {
-	color: #8a8988;
+	color: #a9b7b2;
 	font-size: 13px;
 	font-size: 0.8125rem;
 	letter-spacing: 0.15em;
@@ -595,7 +596,6 @@ acronym {
 	cursor: help;
 }
 
-mark,
 ins {
 	background: #e5e5e5;
 	text-decoration: none;
@@ -653,7 +653,7 @@ input[type="email"],
 input[type="url"],
 input[type="search"],
 textarea {
-	color: #1b1d1d;
+	color: #1b1d1f;
 	background: rgba(239,239,235,.95);
 	border: 1px solid #8a8988;
 	-webkit-border-radius: 3px;
@@ -815,27 +815,41 @@ a:focus {
 	outline: thin dotted;
 }
 
-a:hover,
-a:active {
-	color: #1a5f99;
-	outline: 0;
-}
-
 /* Hover effects */
-
 .entry-content a,
 .entry-summary a,
+.entry-footer a,
 .widget a,
 .site-footer .widget-area a,
 .sidebar-inline .widget-column a,
 .posts-navigation a {
-	-webkit-box-shadow: inset 0 -1px 0 rgba(15, 15, 15, 1);
-	box-shadow: inset 0 -1px 0 rgba(15, 15, 15, 1);
+  -webkit-box-shadow: inset 0 -1px 0 #0a161f; /* Equivalant to #f0f0f0 */
+	box-shadow: inset 0 -1px 0 #0a161f; /* Equivalant to #f0f0f0 */
 	-webkit-transition: color 80ms ease-in, -webkit-box-shadow 130ms ease-in-out;
 	transition: color 80ms ease-in, -webkit-box-shadow 130ms ease-in-out;
 	transition: color 80ms ease-in, box-shadow 130ms ease-in-out;
 	transition: color 80ms ease-in, box-shadow 130ms ease-in-out, -webkit-box-shadow 130ms ease-in-out;
 }
+.entry-content a:hover,
+.entry-content a:active,
+.entry-summary a:hover,
+.entry-summary a:active,
+.entry-footer a:hover,
+.entry-footer a:active,
+.widget a:hover,
+.widget a:active,
+.site-footer .widget-area a:hover,
+.site-footer .widget-area a:active,
+.sidebar-inline .widget-column a:hover,
+.sidebar-inline .widget-column a:active,
+.posts-navigation a:hover,
+.posts-navigation a:active {
+	color: #1a5f99;
+	outline: 0;
+  -webkit-box-shadow: inset 0 0 0 rgba(26, 95, 153, 0), 0 1px 0 rgba(26, 95, 153, 1); /* Equivalant to #fff */
+	box-shadow: inset 0 0 0 rgba(26, 95, 153, 0), 0 1px 0 rgba(26, 95, 153, 1);
+}
+
 
 .entry-title a,
 .entry-meta a,
@@ -960,7 +974,7 @@ a .nav-title,
 }
 
 .main-navigation li {
-	border-bottom: 1px solid #8a8988;
+	border-bottom: 1px solid #ecdfdb;
 	position: relative;
 }
 
@@ -979,6 +993,8 @@ a .nav-title,
 
 .main-navigation a:hover {
 	color: #1a5f99;
+  -webkit-box-shadow: none;
+	box-shadow: none;
 }
 
 /* Menu toggle */
@@ -987,7 +1003,7 @@ a .nav-title,
 	border: 0;
 	-webkit-box-shadow: none;
 	box-shadow: none;
-	color: #222;
+	color: #0a161f;
 	display: none;
 	font-size: 18px;
 	font-size: 1rem;
@@ -1039,7 +1055,7 @@ a .nav-title,
 	border: 0;
 	-webkit-box-shadow: none;
 	box-shadow: none;
-	color: #222;
+	color: #0a161f;
 	display: block;
 	font-size: 16px;
 	right: -0.5em;
@@ -1168,7 +1184,14 @@ html {
 
 .site-title,
 .site-title a {
+  color: #0a161f;
 	opacity: 1; /* Prevent opacity from changing during selective refreshes in the customize preview */
+}
+
+.site-title a:hover,
+.site-title a:active
+{
+	color: #283a49;
 }
 
 .site-description {
@@ -1208,6 +1231,8 @@ html {
 	/*margin-bottom: 72px;*/
 }
 
+
+
 /*--------------------------------------------------------------
 13.2 Regular Content
 --------------------------------------------------------------*/
@@ -1246,7 +1271,7 @@ html {
 
 .page-title,
 body.page .entry-title {
-	color: #222;
+	color: #0a161f;
 	font-size: 14px;
 	font-size: 0.875rem;
 	font-weight: 700;
@@ -1273,6 +1298,11 @@ body.page .entry-title {
 	letter-spacing: 0.1818em;
 	padding-bottom: 0.25em;
 	text-transform: uppercase;
+}
+
+.entry-meta,
+.entry-meta a {
+  color: #283a49;
 }
 
 .calendar-desc,
@@ -1409,21 +1439,8 @@ body .entry-header {
 	padding-top: 0;
 }
 
-.blog .entry-meta a.post-edit-link,
-.archive .entry-meta a.post-edit-link,
-.search .entry-meta a.post-edit-link {
-	display: inline-block;
-	margin-left: 1em;
-	white-space: nowrap;
-}
-
-.search .page .entry-meta a.post-edit-link {
-	margin-left: 0;
-	white-space: nowrap;
-}
-
 .taxonomy-description {
-	color: #666;
+	color: #a9b7b2;
 	font-size: 13px;
 	font-size: 0.8125rem;
 }
@@ -1436,11 +1453,11 @@ body .entry-header {
 
 /* More tag */
 
-.entry-content ul,
-.entry-content ol {
-    border-bottom: 5px double #7c7b7a;
+.entry-content h2 {
+    color: #0a161f;
+    border-bottom: 5px double #0a161f;
     border-radius: 5px;
-    color: #aaa9a8;
+    font-size: 1.2em;
     display: inline-block;
     font-weight: 700;
     line-height: inherit;
@@ -1468,7 +1485,7 @@ body .entry-header {
 /* Entry footer */
 
 .entry-footer {
-	border-bottom: 1px solid #9d9995;
+	border-bottom: 1px solid #ecdfdb;
 	border-top: 1px solid #9d9995;
 	margin-top: 2em;
 	padding: 2em 0;
@@ -1592,6 +1609,16 @@ span.license-cc a:first-child {
 .nav-links .nav-next .nav-title .nav-title-icon-wrapper {
 	margin-left: 0.5em;
 }
+
+.post-navigation a:focus ,
+.post-navigation a:hover  {
+  color: #1a5f99;
+}
+/*
+.post-navigation a:focus .icon,
+.post-navigation a:hover .icon {
+  color: #0a161f;
+}*/
 
 /*--------------------------------------------------------------
 13.5 Pages
@@ -1981,7 +2008,7 @@ li.bypostauthor > article > footer > div.comment-metadata > b.author-url a {
 
 .no-comments,
 .comment-awaiting-moderation {
-	color: #8a8988;
+	color: #9ab7b2;
 	font-size: 14px;
 	font-size: 0.875rem;
 	font-style: italic;
@@ -2081,6 +2108,7 @@ h2.widget-title {
 	letter-spacing: 0.1818em;
 	margin-bottom: 1.5em;
 	text-transform: uppercase;
+  color: #0a161f;
 }
 
 .widget-title a {
@@ -2737,6 +2765,12 @@ object {
 	right: 0;
 }
 
+.menu-scroll-up,
+.menu-scroll-up:hover,
+.menu-scroll-up:focus {
+	background-color: transparent;
+}
+
 .menu-scroll-up .icon {
 	height: 18px;
 	width: 18px;
@@ -3034,6 +3068,119 @@ object {
 	}
 }
 
+/**
+ dark style
+ */
+
+
+.entry-content a,
+.entry-summary a,
+.widget a,
+.site-footer .widget-area a,
+.posts-navigation a {
+	-webkit-box-shadow: inset 0 -1px 0 #0a161f; /* Equivalant to #f0f0f0 */
+	box-shadow: inset 0 -1px 0 #0a161f; /* Equivalant to #f0f0f0 */
+}
+
+body,
+.button,
+.input,
+.select,
+.textarea,
+.h3,
+.h4,
+.h6,
+.label,
+.format-quote blockquote,
+.comment-body {
+	color: #0a161f;
+}
+
+.blockquote,
+.entry-content blockquote.alignleft,
+.entry-content blockquote.alignright,
+.wp-caption {
+	color: #a9b7b2;
+}
+
+.navigation-top .current-menu-item > a,
+.navigation-top .current_page_item > a {
+  text-shadow: 1px 1px 2px #8a8988;
+}
+
+.abbr,
+.acronym {
+	border-bottom-color: #0a161f;
+}
+
+.select,
+.fieldset {
+	border-color: #8a8988;
+}
+
+.pre,
+.ins,
+.select,
+.fieldset {
+	background: #8a8988;
+}
+
+#comments {
+	border-bottom-color: #333;
+}
+
+.site-content-contain,
+.navigation-top {
+	background: rgba(236,229,223,1);
+}
+
+.main-navigation ul {
+	background: transparent;
+}
+
+/* Fixes linked images */
+.entry-content a img,
+.widget a img {
+	-webkit-box-shadow: 0 0 0 8px #222;
+	box-shadow: 0 0 0 8px #222;
+}
+
+@media screen and (min-width: 48em) {
+
+	.main-navigation li li:hover,
+	.main-navigation li li.focus {
+		background: #efefea;
+	}
+
+	.main-navigation ul ul {
+		border-color: #8a8988;
+		background: #ece5df;
+	}
+
+	.main-navigation ul li.menu-item-has-children:before,
+	.main-navigation ul li.page_item_has_children:before {
+		border-bottom-color: #8a8988;
+	}
+
+	.main-navigation ul li.menu-item-has-children:after,
+	.main-navigation ul li.page_item_has_children:after {
+		border-bottom-color: #8a8988;
+	}
+
+	.main-navigation li li.focus > a,
+	.main-navigation li li:focus > a,
+	.main-navigation li li:hover > a,
+	.main-navigation li li a:hover,
+	.main-navigation li li a:focus,
+	.main-navigation li li.current_page_item a:hover,
+	.main-navigation li li.current-menu-item a:hover,
+	.main-navigation li li.current_page_item a:focus,
+	.main-navigation li li.current-menu-item a:focus {
+		color: #1a5f99;
+	}
+
+}
+
 /*--------------------------------------------------------------
 20.0 Print
 --------------------------------------------------------------*/
@@ -3172,185 +3319,4 @@ object {
 	.site-footer {
 		padding: 0;
 	}
-}
-
-
-/**
- dark style
- */
-span.license-cc a:focus,
-span.license-cc a:hover,
-.entry-content a:focus,
-.entry-content a:hover,
-.entry-summary a:focus,
-.entry-summary a:hover,
-.widget a:focus,
-.widget a:hover,
-.site-footer .widget-area a:focus,
-.site-footer .widget-area a:hover,
-.sidebar-inline .widget-column a:focus,
-.sidebar-inline .widget-column a:hover,
-.posts-navigation a:focus,
-.posts-navigation a:hover,
-.comment-reply-link:focus,
-.comment-reply-link:hover,
-.entry-title a:focus,
-.entry-title a:hover,
-.entry-footer .cat-links a:focus,
-.entry-footer .cat-links a:hover,
-.entry-footer .date-links a:focus,
-.entry-footer .date-links a:hover,
-.entry-footer .tags-links a:focus,
-.entry-footer .tags-links a:hover,
-.post-navigation a:focus,
-.post-navigation a:hover,
-.pagination a:not(.prev):not(.next):focus,
-.pagination a:not(.prev):not(.next):hover,
-.comments-pagination a:not(.prev):not(.next):focus,
-.comments-pagination a:not(.prev):not(.next):hover,
-.a:focus .nav-title,
-.a:hover .nav-title,
-.edit-link a:focus,
-.edit-link a:hover,
-.site-info a:focus,
-.site-info a:hover,
-.author-url a:focus,
-.author-url a:hover,
-.widget .widget-title a:focus,
-.widget .widget-title a:hover,
-.widget ul li a:focus,
-.widget ul li a:hover {
-	-webkit-box-shadow: inset 0 0 0 rgba(26, 95, 153, 0), 0 1px 0 rgba(26, 95, 153, 1); /* Equivalant to #fff */
-	box-shadow: inset 0 0 0 rgba(26, 95, 153, 0), 0 1px 0 rgba(26, 95, 153, 1); /* Equivalant to #fff */
-}
-
-.entry-content a,
-.entry-summary a,
-.widget a,
-.site-footer .widget-area a,
-.sidebar-inline .widget-column a,
-.posts-navigation a {
-	-webkit-box-shadow: inset 0 -1px 0 #0a161f; /* Equivalant to #f0f0f0 */
-	box-shadow: inset 0 -1px 0 #0a161f; /* Equivalant to #f0f0f0 */
-}
-
-body,
-.button,
-.input,
-.select,
-.textarea,
-.h3,
-.h4,
-.h6,
-.label,
-.format-quote blockquote,
-.comment-body {
-	color: #0a161f;
-}
-
-.bypostauthor > .comment-body > .comment-meta > .comment-author .avatar {
-	border-color: #e5e5e5;
-}
-
-.dropdown-toggle,
-.menu-toggle,
-.page .entry-title,
-.h2.widget-title,
-.h2.sidebar-inline-title,
-.mark {
-	color: #0a161f;
-}
-
-.h2,
-.blockquote,
-.entry-content blockquote.alignleft,
-.entry-content blockquote.alignright,
-.taxonomy-description,
-.wp-caption {
-	color: #a9b7b2;
-}
-
-.navigation-top .current-menu-item > a,
-.navigation-top .current_page_item > a {
-  text-shadow: 1px 1px 2px #8a8988;
-}
-
-.abbr,
-.acronym {
-	border-bottom-color: #0a161f;
-}
-
-.h5,
-.no-comments,
-.comment-awaiting-moderation {
-	color: #a9b7b2;
-}
-
-.select,
-.fieldset {
-	border-color: #8a8988;
-}
-
-.pre,
-.mark,
-.ins,
-.select,
-.fieldset {
-	background: #333;
-}
-
-#comments {
-	border-bottom-color: #333;
-}
-
-.site-content-contain,
-.navigation-top {
-	background: rgba(236,229,223,1);
-}
-
-.main-navigation ul {
-	background: transparent;
-}
-
-/* Fixes linked images */
-.entry-content a img,
-.widget a img {
-	-webkit-box-shadow: 0 0 0 8px #222;
-	box-shadow: 0 0 0 8px #222;
-}
-
-@media screen and (min-width: 48em) {
-
-	.main-navigation li li:hover,
-	.main-navigation li li.focus {
-		background: #efefea;
-	}
-
-	.main-navigation ul ul {
-		border-color: #8a8988;
-		background: #ece5df;
-	}
-
-	.main-navigation ul li.menu-item-has-children:before,
-	.main-navigation ul li.page_item_has_children:before {
-		border-bottom-color: #8a8988;
-	}
-
-	.main-navigation ul li.menu-item-has-children:after,
-	.main-navigation ul li.page_item_has_children:after {
-		border-bottom-color: #8a8988;
-	}
-
-	.main-navigation li li.focus > a,
-	.main-navigation li li:focus > a,
-	.main-navigation li li:hover > a,
-	.main-navigation li li a:hover,
-	.main-navigation li li a:focus,
-	.main-navigation li li.current_page_item a:hover,
-	.main-navigation li li.current-menu-item a:hover,
-	.main-navigation li li.current_page_item a:focus,
-	.main-navigation li li.current-menu-item a:focus {
-		color: #1a5f99;
-	}
-
 }

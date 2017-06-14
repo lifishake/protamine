@@ -16,7 +16,7 @@
 		'menu_id'        => 'top-menu',
 	) ); ?>
 
-	<?php if ( has_custom_header() ) : ?>
+
 		<a href="" rel="tohead" class="menu-scroll-up"><?php echo protamine_get_svg( array( 'icon' => 'square-up' ) ); ?><span class="screen-reader-text"><?php echo( '回到顶部' ); ?></span></a>
-	<?php endif; ?>
+
 </nav><!-- #site-navigation -->
