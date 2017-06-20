@@ -6,7 +6,7 @@
 ?>
 <div id="respond" class="comment-respond">
 <h3 id="reply-title" class="comment-reply-title">
-<?php 
+<?php
     $thumbnail_src = protamine_get_thumbnail_str();
     if ( $thumbnail_src )
     {
