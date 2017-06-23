@@ -5,7 +5,7 @@ Theme URI: //pewae.com
 Author: 大致
 Author URI: //pewae.com
 Description: protamine基于wordpress官方主题修改。本主题追求简单快捷舒适，仅适用于中文用户。
-Version: 0.0.3
+Version: 0.0.4
 GitHub Theme URI: lifishake/protamine
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -689,7 +689,7 @@ input[type="submit"] {
 	-webkit-box-shadow: none;
 	box-shadow: none;
 	color: #ece5df;
-	background-color: #0a161f;
+	background-color: #283a49;
 	cursor: pointer;
 	display: inline-block;
 	font-size: 14px;
@@ -1568,7 +1568,7 @@ span.license-cc a:first-child {
 	font-weight: 700;
 	margin-top: 2em;
 	padding: 0.7em 2em;
-	background-color: #0a161f;
+	background-color: #283a49;
 	color: #ece5df;
 	-webkit-transition: background-color 0.2s ease-in-out;
 	transition: background-color 0.2s ease-in-out;
@@ -2036,8 +2036,6 @@ li.bypostauthor > article > footer > div.comment-metadata > b.author-url a {
 
 .show-form {
     cursor: pointer;
-    background-color: #0a161f;
-    color: #ece5df;
 }
 
 /*-----------------
