@@ -288,6 +288,13 @@ function protamine_entry_footer() {
   if ( $tags_list ) {
   echo '<span class="tags-links">' . protamine_get_svg( array( 'icon' => 'hashtag' ) ) . $tags_list . '</span>';
   }
+  //发帖时天气
+  if( function_exists('apip_get_heweather') )  {
+      $heweather = apip_get_heweather();
+      if ( '' !== $heweather ) {
+          echo '<span class="weather-links">'.$heweather. '</span>';
+      }
+  }
 
   echo '</span>';
   }

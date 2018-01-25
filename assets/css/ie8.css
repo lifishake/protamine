@@ -151,7 +151,8 @@ time.published {
 }
 
 .entry-footer .cat-links,
-.entry-footer .tags-links {
+.entry-footer .tags-links,
+.entry-footer .weather-links  {
 	padding-left: 0;
 }
 

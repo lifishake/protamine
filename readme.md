@@ -7,8 +7,8 @@
 # II. 资源 #
 
 # III. 注意事项和使用说明 #
-1. 如果不是以为GPL的要求，本人其实根本不想把这个主题公开。为了省事，所有的注释以及可配置的字符串都设成了中文UTF8编码。所有的歪果仁朋友，对不起了。    
-	Sorry for non-Chinese developers, the author had never supposed to support any foreign languages.     
+1. 如果不是以为GPL的要求，本人其实根本不想把这个主题公开。为了省事，所有的注释以及可配置的字符串都设成了中文UTF8编码。所有的歪果仁朋友，对不起了。
+	Sorry for non-Chinese developers, the author had never supposed to support any foreign languages.
 	非中国の開発者のため申し訳ありませんが、著者は、任意の外国語をサポートする予定はありませんでした。
 2. 不建议多用户使用本主题。因为本人删除了author相关的内容。
 3. 不支持wp_link_pages（）函数。有文章内部分页需求的人请勿使用本主题。
@@ -32,3 +32,8 @@
 
 ## 2017/6/23 0.04 ##
 - 配色修改
+
+## 2018/1/25 0.05 ##
+- 字号修改
+- 显示天气字符串
+- 修改删除线格式

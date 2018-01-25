@@ -36,6 +36,7 @@ function protamine_setup() {
 		'comment-form',
 		'comment-list',
 		'caption',
+        'search-form',
 	) );
 
 	add_theme_support( 'post-formats', array(
@@ -162,6 +163,15 @@ function protamine_content_image_sizes_attr( $sizes, $size ) {
 }
 add_filter( 'wp_calculate_image_sizes', 'protamine_content_image_sizes_attr', 10, 2 );
 
+//https://stackoverflow.com/questions/31822842/adding-search-bar-to-the-nav-menu-in-wordpress
+function protamine_add_search_to_menu($items, $args) {
+    // If this isn't the primary menu, do nothing
+    if( !($args->theme_location == 'top') )
+    return $items;
+    // Otherwise, add search form
+    return $items . '<li>' . get_search_form(false) . '</li>';
+}
+//add_filter('wp_nav_menu_items', 'protamine_add_search_to_menu', 10, 2);
 
 function protamine_header_image_tag( $html, $header, $attr ) {
 	if ( isset( $attr['sizes'] ) ) {

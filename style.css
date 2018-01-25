@@ -5,7 +5,7 @@ Theme URI: //pewae.com
 Author: 大致
 Author URI: //pewae.com
 Description: protamine基于wordpress官方主题修改。本主题追求简单快捷舒适，仅适用于中文用户。
-Version: 0.0.4
+Version: 0.0.5
 GitHub Theme URI: lifishake/protamine
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -74,7 +74,7 @@ Styles based on Normalize v5.0.0 @link https://github.com/necolas/normalize.css
 }
 
 html {
-	font-family: Helvetica, Arial, Calibri, Avenir, 'Lucida Grande',STHeitiTC-Light,"PingFang TC", "Helvetica Neue", 'Microsoft YaHei', 'Hiragino Sans GB','Microsoft JhengHei', NSimSun, SimSun, SimHei, STXihei, STHeiti, sans-serif;
+	font-family: Helvetica, Arial, Calibri, Avenir, 'Lucida Grande','Microsoft JhengHei',STHeitiTC-Light,"PingFang TC", "Helvetica Neue", 'Microsoft YaHei', 'Hiragino Sans GB', NSimSun, SimSun, SimHei, STXihei, STHeiti, sans-serif;
 	line-height: 1.15;
 	-ms-text-size-adjust: 100%;
 	-webkit-text-size-adjust: 100%;
@@ -151,9 +151,8 @@ strong {
 }
 
 del {
-	/*text-decoration-color: #ccc;*/
-	text-decoration: none;
-	box-shadow: inset -5px -1px 0 0 #fff, inset -8px -3px 0 0 #bdb;
+    color: #9d9995;
+    text-decoration: line-through double #0a161f;
 }
 
 code,
@@ -857,6 +856,7 @@ a:focus {
 .entry-footer .cat-links a,
 .entry-footer .date-links a,
 .entry-footer .tags-links a,
+.entry-footer .weather-links a,
 .edit-link a,
 .post-navigation a,
 .comment-navigation a,
@@ -1425,7 +1425,7 @@ a.prev.page-numbers:hover {
 }
 
 body .entry-header {
-	padding: 1em 0;
+	padding: 1em 0 0.5em;
 }
 
 body .entry-header,
@@ -1529,7 +1529,8 @@ span.license-cc a:first-child {
 
 .entry-footer .cat-links,
 .entry-footer .date-links,
-.entry-footer .tags-links {
+.entry-footer .tags-links,
+.entry-footer .weather-links {
 	display: block;
 	font-size: 11px;
 	font-size: 0.6875rem;
@@ -1539,13 +1540,14 @@ span.license-cc a:first-child {
 	text-transform: uppercase;
 }
 
-.entry-footer .cat-links + .date-links + .tags-links {
+.entry-footer .cat-links + .date-links + .tags-links + .weather-links {
 	margin-top: 1em;
 }
 
 .entry-footer .cat-links .icon,
 .entry-footer .date-links .icon,
-.entry-footer .tags-links .icon {
+.entry-footer .tags-links .icon,
+.entry-footer .weather-links .icon {
 	left: 4px;
 	margin-left: 0.5em;
 	margin-right: 0.5em;
@@ -2406,28 +2408,28 @@ object {
 	input,
 	select,
 	textarea {
-		font-size: 18px;
-		font-size: 1.125rem;
+		font-size: 16px;
+		font-size: 1rem;
 	}
 
 	h1 {
-		font-size: 30px;
-		font-size: 1.875rem;
+        font-size: 24px;
+		font-size: 1.5rem;
 	}
 
 	h2 {
-		font-size: 26px;
-		font-size: 1.625rem;
-	}
-
-	h3 {
-		font-size: 22px;
+        font-size: 22px;
 		font-size: 1.375rem;
 	}
 
-	h4 {
-		font-size: 18px;
+	h3 {
+        font-size: 18px;
 		font-size: 1.125rem;
+	}
+
+	h4 {
+        font-size: 16px;
+		font-size: 1rem;
 	}
 
 	h5 {
@@ -2495,7 +2497,7 @@ object {
 	select,
 	textarea {
 		font-size: 16px;
-		font-size: 1.125rem;
+		font-size: 1rem;
 		line-height: 1.5;
 	}
 
@@ -2779,13 +2781,13 @@ object {
 	/* Posts */
 
 	.site-content {
-		padding: 5.5em 0 0;
+		padding: 3.5em 0 0;
 	}
 
 	.single-post .entry-title,
 	.page .entry-title {
-		font-size: 26px;
-		font-size: 1.625rem;
+		font-size: 24px;
+		font-size: 1.5rem;
 	}
 
 	.comments-pagination,
@@ -2821,7 +2823,7 @@ object {
 	.blog .site-main > article,
 	.archive .site-main > article,
 	.search .site-main > article {
-		padding-bottom: 4em;
+		padding-bottom: 2em;
 	}
 
 	.navigation.pagination {
