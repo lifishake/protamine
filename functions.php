@@ -5,7 +5,7 @@
  * @link https://developer.wordpress.org/themes/basics/theme-functions/
  *
  * @package WordPress
- * @subpackage SkyWarp2
+ * @subpackage protamine
  * @since 1.0
  */
 

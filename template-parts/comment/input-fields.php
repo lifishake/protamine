@@ -17,6 +17,9 @@
 <?php cancel_comment_reply_link( '取消回复' ); ?>
 </small>
 </h3>
+<?php if (function_exists('apip_commentquiz_form')) {
+    apip_commentquiz_form();
+}?>
 <form method="post" id="commentform" class="comment-form" novalidate >
 <?php if( is_user_logged_in() ) : ?>
     <p class="logged-in-as">已登录</p>
