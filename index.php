@@ -36,12 +36,12 @@ get_header(); ?>
 
 				endwhile;
 
-				/*the_posts_pagination( array(
+				the_posts_pagination( array(
 					'prev_text' => protamine_get_svg( array( 'icon' => 'arrow-left' ) ) . '<span class="screen-reader-text">上一页</span>',
 					'next_text' => '<span class="screen-reader-text">下一页</span>' . protamine_get_svg( array( 'icon' => 'arrow-right' ) ),
 					'before_page_number' => '<span class="meta-nav screen-reader-text">页</span>',
-				) );*/
-				the_posts_navigation();
+				) );
+				/*the_posts_navigation();*/
 
 			else :
 

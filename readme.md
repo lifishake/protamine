@@ -40,3 +40,7 @@
 
 ## 2018/3/20 0.06 ##
 - 配合显示留言框问题
+
+## 2018/5/28 1.01 ##
+- 修改配色，参照https://www.schemecolor.com/little-girl-and-little-boy-color-scheme.php，将配色改为浅蓝色和粉色的搭配。
+- 特色图片追加到导航栏处。

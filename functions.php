@@ -142,6 +142,35 @@ function protamine_scripts() {
 	}
 
 	$css = '.site-navigation-fixed.navigation-top:before {	content: \''. get_bloginfo('name') .'\'; }';
+    $thumbnail_src = protamine_get_thumbnail_str();
+    $header_src = get_theme_file_uri( 'assets/images/header.jpg' );
+    if ( $thumbnail_src )
+    {
+        $css .= ".comment-form-comment{background: #fff url(\"".$thumbnail_src." \") no-repeat center center ; background-size: 100%, auto;}";
+        $css .= ".navigation-top,.navigation-top .site-navigation-fixed{
+            background: url(\"".$thumbnail_src." \") no-repeat center right ;
+            background-size: cover;
+        }";
+        $css .= ".main-navigation.toggled-on{background: linear-gradient(
+      rgba(255, 255, 255, 0.95),
+      rgba(255, 255, 255, 0.95)
+    ) , url(\"".$thumbnail_src." \") ;
+            background-position: center top, center right;
+            background-size: 100%,cover;
+            background-repeat: repeat-y,no-repeat;
+       }";
+    }
+    else {
+        $css .= ".comment-form-comment{background: #fff url(\"".$header_src." \") no-repeat center center ; background-size: 100%, auto;}";
+        $css .= ".main-navigation.toggled-on{background: linear-gradient(
+      rgba(255, 255, 255, 0.95),
+      rgba(255, 255, 255, 0.95)
+    ) , url(\"".$header_src." \") ;
+            background-position: center top, center right;
+            background-size: 100%,cover;
+            background-repeat: repeat-y,no-repeat;
+       }";
+    }
 	wp_add_inline_style('protamine-style', $css);
 }
 add_action( 'wp_enqueue_scripts', 'protamine_scripts' );
